@@ -1,0 +1,1 @@
+nextflow run nf-core/sarek -r 3.1.1 -profile docker --outdir ./NBK --wes True --intervals xgen-exome-hyb-panel-v2-probes-hg38.bed --aligner bwa-mem --save_mapped True --tools haplotypecaller,merge --max_cpus 64 --max_memory 250.GB --maxtime 480.h --save_mapped True --skip_tools ascat --igenomes_base /disk1/references/ --input samplesheet.csv -resume
