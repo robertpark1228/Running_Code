@@ -1,0 +1,1 @@
+nextflow run nf-core/mag -profile docker --input worksheet_2.csv --max_cpus 64 --max_memory 500.GB --max_time 640.h --centrifuge_db p_compressed+h+v.tar.gz --outdir ./sample4 --gtdb ./gtdbtk_r202_data.tar.gz --keep_phix TRUE -resume TRUE --skip_spades True --skip_spadeshybrid True --binning_map_mode own -r 2.2.1
