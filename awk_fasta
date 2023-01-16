@@ -1,0 +1,1 @@
+ awk 'BEGIN{RS=ORS=">"}!/X/' total.M.faa > X_filtered.faa
