@@ -1,1 +1,2 @@
- awk 'BEGIN{RS=ORS=">"}!/X/' total.M.faa > X_filtered.faa
+awk 'BEGIN{RS=ORS=">"}!/X/' total.M.faa > X_filtered.faa
+awk 'BEGIN {RS = ">" ; FS = "\n" ; ORS = ""} {if ($2) print ">"NR$0}'
