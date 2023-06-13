@@ -1,1 +1,6 @@
-countdata_new2 <- countdata_new %>% group_by(gene_name) %>% summarise_each(funs(sum)) 
+args<-commandArgs(trailingOnly=TRUE)
+args2<-paste(args,"result.csv",sep="")
+data<-read.csv(args,header=TRUE)
+library("dplyr")
+output<-data %>% group_by(gene_id) %>% summarise_each(funs(sum))
+write.csv(output,args2,row.names=FALSE)
