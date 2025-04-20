@@ -1,0 +1,1 @@
+ nextflow run nf-core/ampliseq -r 2.13.0 -profile docker --input samplesheet.tsv --outdir ./16s_single --dada_ref_taxonomy silva=138 --max_cpus 30 --max-memory 300.GB --max_time 9000.h --single_end TRUE --skip_cutadapt TRUE  --skip_dada_addspecies True --picrust False --skip_fastqc TRUE
