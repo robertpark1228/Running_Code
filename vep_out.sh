@@ -1,7 +1,7 @@
 #!/bin/bash
 input=${1}
 
-vep -i ${input} -o ${input}.vep.dbnsfp.vcf --vcf --cache --offline --assembly GRCh38 --plugin dbNSFP,/disk1/oneomics_analysis/references/dbNSFP5.1a/dbNSFP5.1a_all.tsv.gz,ALL --dir_plugins /disk1/oneomics_analysis/references/vep/VEP_plugins --fork 80 --offline --dir_cache /disk1/oneomics_analysis/references/vep/ --everything --force_overwrite --fasta /disk1/oneomics_analysis/references/vep/Homo_sapiens.GRCh38.dna.toplevel.fa --hgvs --variant_class --sift b --polyphen b --humdiv --gene_phenotype --hgvsg
+vep -i ${input} -o ${input}.vep.dbnsfp.vcf --vcf --cache --offline --assembly GRCh38 --plugin dbNSFP,/disk1/oneomics_analysis/references/dbNSFP5.1a/dbNSFP5.1a_all.tsv.gz,ALL --dir_plugins /disk1/oneomics_analysis/references/vep/VEP_plugins --fork 80 --offline --dir_cache /disk1/oneomics_analysis/references/vep/ --everything --force_overwrite --fasta /disk1/oneomics_analysis/references/vep/Homo_sapiens.GRCh38.dna.toplevel.fa --hgvs --variant_class --sift b --polyphen b --humdiv --gene_phenotype --hgvsg 
 
 
 vcf="${input}.vep.dbnsfp.vcf"
@@ -43,3 +43,5 @@ csvtk join -f Gene,Gene ${out} dbNSFP5.1_gene.tsv -t -H -k > ${out}_with_gene.ts
 #grep -v "^##" ${input}.vep.tsv > ${input}.vep.tsv.temp
 
 #csvtk join -f Gene,Gene ${input}.vep.tsv.temp dbNSFP5.1_gene.tsv -t -H -k > ${input}.vep.tsv.txt
+
+
